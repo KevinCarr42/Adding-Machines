@@ -25,19 +25,50 @@ With each machine learning model, I am asking the following questions:
 2. Default settings only. For the neural network, there is no default setting per se, so I've tried to keep things simple.
 
 
-## Results
+## Analsysis and Modelling
 
-### Visualisation of Model Predictions
+Models were trained using a variety of datasets. Training datasets were varied in terms of size (number of samples) and accuracy (percent of correct values).
 
-#### Scatterplots of Training Set vs Model Predictions
+Datasets had the following sizes:
+* 100
+* 1,000
+* 10,000
+
+Dataset accuracy ranged from 50% to 100%. Accuracy determined how many y-values were exactly x1 + x2 in the given dataset. All incorrect data were randomly determined, i.e., they followed a uniform distribution. This method of assigning errors to the training set was chosen to approximate random noise in the data, incorrect inputs, flawed design etc. Other methods could be useful for evaluating these models to gain further insight.
+
+The following dataset accuracies were included in the training dataset:
+* 100%
+* 99%
+* 90%
+* 75%
+* 50%
+
+For brevity (or at least a bit less verbosity), not all dataset sizes and accuracies were used for every visualisation. Additional analysis are included in the Python notebook file, and were not included in the summary document.
+
+### Scatterplots of Training Set vs Model Predictions
+
+Training datasets are shown in grey, and model predictions are shown in blue.
+
+*Figure 1. Scatterplot of Model Predictions vs Accuracy - 100 Samples of Training Data*
+![alt text](https://github.com/KevinCarr42/Teaching-A-Machine-To-Add/blob/main/predictions_100_samples.png)
+
+*Figure 2. Scatterplot of Model Predictions vs Accuracy - 10,000 Samples of Training Data*
+![alt text](https://github.com/KevinCarr42/Teaching-A-Machine-To-Add/blob/main/predictions_10k_samples.png)
 
 
+### Heatmaps of Model Predictions Adding the Number 0 to 10
 
-#### Heatmaps of Model Predictions Adding the Number 0 to 10
+*Figure 3. Heatmaps of Predictions - 10,000 Samples of Training Data*
+![alt text](https://github.com/KevinCarr42/Teaching-A-Machine-To-Add/blob/main/heatmaps_of_predictions.png)
 
 
+### Model Performance vs Training Data Size and Accuracy
 
-#### Model Performance vs Training Data Size and Accuracy
+*Figure 4. Model Performance vs Training Data Sample Size*
+![alt text](https://github.com/KevinCarr42/Teaching-A-Machine-To-Add/blob/main/performance_v_size.png)
+
+*Figure 5. Model Performance vs Training Data Accuracy*
+![alt text](https://github.com/KevinCarr42/Teaching-A-Machine-To-Add/blob/main/performance_v_accuracy.png)
 
 
 ## Discussion And Conclusions
