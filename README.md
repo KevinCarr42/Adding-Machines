@@ -25,7 +25,7 @@ With each machine learning model, I am asking the following questions:
 2. Default settings only. For the neural network, there is no default setting per se, so I've tried to keep things simple.
 
 
-## Analsysis and Modelling
+## Analysis and Modelling
 
 Models were trained using a variety of datasets. Training datasets were varied in terms of size (number of samples) and accuracy (percent of correct values).
 
@@ -47,7 +47,7 @@ For brevity (or at least a bit less verbosity), not all dataset sizes and accura
 
 ### Scatterplots of Training Set vs Model Predictions
 
-Training datasets are shown in grey, and model predictions are shown in blue.
+In these plots, the predictions (y-axis) are compared to the correct value (x-axis) in order to visualise errors and predictions. Training datasets are shown in grey, and model predictions are shown in blue.
 
 *Figure 1. Scatterplot of Model Predictions vs Accuracy - 100 Samples of Training Data*
 ![alt text](https://github.com/KevinCarr42/Teaching-A-Machine-To-Add/blob/main/predictions_100_samples.png)
@@ -58,11 +58,19 @@ Training datasets are shown in grey, and model predictions are shown in blue.
 
 ### Heatmaps of Model Predictions Adding the Number 0 to 10
 
+In these plots, the models predict the addition of every number from 0 to 10 to every number from 0 to 10. One would expect a grid with values from 0 to 20, and a smooth colour gradient from top left to bottom right. 
+
+For "brevity", only models trained with datasets of 10,000 samples were plotted on heatmaps. Additionally, predictions from these models are only shown at three training data accuracies (50%, 90%, and 100%).
+
 *Figure 3. Heatmaps of Predictions - 10,000 Samples of Training Data*
 ![alt text](https://github.com/KevinCarr42/Teaching-A-Machine-To-Add/blob/main/heatmaps_of_predictions.png)
 
 
 ### Model Performance vs Training Data Size and Accuracy
+
+Model performance was assessed as a function of training data sample size and training data accuracy. The two metrics used to evaluate the performance of the predictions was number of correct answers (rounded to the nearest integer) and mean squared error (MSE).
+
+When assessing performance vs training data sample size, only three sample accuracies were shown (50%, 90%, and 100%).
 
 *Figure 4. Model Performance vs Training Data Sample Size*
 ![alt text](https://github.com/KevinCarr42/Teaching-A-Machine-To-Add/blob/main/performance_v_size.png)
@@ -77,12 +85,12 @@ Training datasets are shown in grey, and model predictions are shown in blue.
 * Linear regression worked very well as was expected.
 * There were very interesting visual patterns created by the predictions of some of the models. This is related to the randomised input data for model training; re-running the calculations leads to different but similar patterns.
 * The neural network worked very well, but ended up requiring wider layers than expected. Additionally, dropout layers didn't appear improve performance. Most surprisingly, the neural network trained extremely quickly. More investigation would lead to further insight.
-* Completely unsurprisingly, classifiers are not great at adding.
+* Completely unsurprisingly, classifiers had very high MSE. However, the classifiers also tended to out-predict other models in terms of total number of correct answers, especially at lower accuracies.
 
 ### Potential Future Work:
 * Investigate more machine learning models.
 * Use a similar project structure to investigate classification.
-* Examine linear regression with very large data sets; what is the tradeoff between accuracy and size needed to predict correctly?
+* Examine linear regression with very large data sets; what is the trade-off between accuracy and size needed to predict correctly?
 * Investigate neural networks in more detail. What is the ideal method to train a neural net to add? What trade-offs are involved? Investigate depth vs width, dropout, different optimisation algorithms, etc.
 
 ### Other Notes
