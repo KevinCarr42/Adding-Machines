@@ -1,6 +1,6 @@
 # Teaching A Machine To Add
 
-This project examines popular machine learning models in order to gain insights into how these models make predictions. Specifically, how do these models make predictions given imperfect data and varying sample sizes? This project demonstrates how these models make predictions by evaluating how they predict the addition of two numbers.
+This project examines popular machine learning models in order to gain insights into how these models deal with imperfect data and varying sample sizes. Specifically, this project demonstrates how these models predict the addition of two numbers.
 
 ## Introduction
 
@@ -36,7 +36,7 @@ The following dataset accuracies were included in the training dataset:
 * 75%
 * 50%
 
-For brevity (or at least a bit less verbosity), not all dataset sizes and accuracies were used for every visualisation. Additional analysis are included in the Python notebook file, and were not included in the summary document.
+For brevity (or at least a bit less verbosity), not all dataset sizes and accuracies were used for every visualisation. Additional analyses are included in the Python notebook file, and were not included in the summary document.
 
 ### Scatterplots of Training Set vs Model Predictions
 
@@ -48,9 +48,9 @@ In these plots, the predictions (y-axis) are compared to the correct value (x-ax
 *Figure 2. Scatterplot of Model Predictions vs Accuracy - 10,000 Samples of Training Data*
 ![alt text](https://github.com/KevinCarr42/Teaching-A-Machine-To-Add/blob/main/predictions_10k_samples.png)
 
-All models follow some approximation of the basic slope of y<sub>predicted</sub> = y<sub>correct</sub>. However, each model has unique distribution of predictions (although Decision Trees and Random Forest are very similar, due to Random Forests being comprised of an ensemble of Decision Trees).
+All models follow some approximation of the basic slope of y<sub>predicted</sub> = y<sub>correct</sub>. However, each model has a unique distribution of predictions, with the exception of Decision Trees and Random Forests, whose similarity is due to Random Forests being an ensemble of Decision Trees.
 
-An interesting note, the decrease in slope observed in the linear regression model is also observed in the TensorFlow model. For the linear regression model, this change in slope is due to the average value of the predictions being "pulled towards zero" by the random noise from the training set (the "errors"). It is unknown whether there is a similar mechanism in the TensorFlow model.
+An interesting note, the decrease in slope observed in the linear regression model is also observed in the TensorFlow model. For the linear regression model, this change in slope is due to the average value of the predictions being "pulled towards zero" by the random noise from the training set (i.e., the "errors" in training data, which are uniformly distributed about 0). It is unknown whether there is a similar mechanism causing this effect in the TensorFlow model.
 
 ### Heatmaps of Model Predictions Adding the Number 0 to 10
 
@@ -61,7 +61,7 @@ For "brevity", only models trained with datasets of 10,000 samples were plotted 
 *Figure 3. Heatmaps of Predictions - 10,000 Samples of Training Data*
 ![alt text](https://github.com/KevinCarr42/Teaching-A-Machine-To-Add/blob/main/heatmaps_of_predictions.png)
 
-As seen in these heatmaps, each of the models makes prediction errors in distinctive patterns, with approximations becoming better as accuracy in the training data improves. In the linear regression and TensorFlow models, predictions are "pulled towards zero" for lower-accuracy training sets, as noted in the Scatterplot discussion.
+As seen in these heatmaps, each of the models makes prediction errors in distinctive patterns, with approximations becoming better as accuracy in the training data improves. In the linear regression and TensorFlow models, predictions are "pulled towards zero" for lower-accuracy training sets as noted in the Scatterplot discussion.
 
 Patterns in errors in prediction from each of the other models (Decision Tree, Naive Bayes, Random Forest, and XGBoost) do not follow easily predictable patterns.
 
@@ -79,21 +79,21 @@ Increased training data size generally decreases the mean squared error (MSE) an
 *Figure 5. Model Performance vs Training Data Accuracy*
 ![alt text](https://github.com/KevinCarr42/Teaching-A-Machine-To-Add/blob/main/performance_v_accuracy.png)
 
-Increased training data accuracy generally decreases the mean squared error (MSE) and increases the number of correct guesses for each model.
+Similarly, increased training data accuracy generally decreases the mean squared error (MSE) and increases the number of correct guesses for each model.
 
-Linear regression appears to be the best predictive model, due to the lowest MSE under all dataset sizes and accuracy levels (with 1 potentially anomalous exception, Naive Bayes outperforms at 10000 samples of training data at 50% accuracy). With 100% accuracy in training data, the linear regression model outputs perfect predictions, guessing 100% of answers with a MSE of 0. However, when training data accuracy decreases, the number of correct guesses from the linear regression model starts losing to Decision Tree, Random Forest, and XGBoost models (although Decision Tree and Random forest models have very large MSE).
+Linear regression appears to be the most accurate predictive model, due to the lowest MSE under all dataset sizes and accuracy levels (with 1 potentially anomalous exception, Naive Bayes outperforms at 10000 samples of training data at 50% accuracy). With 100% accuracy in training data, the linear regression model outputs perfect predictions, guessing 100% of answers with a MSE of 0. However, when training data accuracy decreases, the number of correct guesses from the linear regression model starts losing to Decision Tree, Random Forest, and XGBoost models (although Decision Tree and Random forest models have very large MSE at these training data accuracy levels).
 
 ## Discussion And Conclusions
 
 ### Summary of Results:
 * Linear regression outperformed most models under most conditions.
 * There were very interesting visual patterns created by the predictions of some of the models. This is related to the randomised input data and model training; re-running the calculations leads to different but similar patterns.
-* The TensorFlow neural network worked very well.
+* The TensorFlow neural network also worked very well in most conditions.
 * Decision Tree and Random Forest models had very high MSE. However, these models also tended to out-predict other models in terms of total number of correct answers, especially at lower accuracies.
 
 ### Potential Future Work:
 * Investigate more machine learning models.
 * Investigate approaches and trade-offs required for these models to make predictions correctly / optimally.
 * Investigate deep neural networks in greater detail.
-* Investigate other basic mathematical functions (e.g., multiplying, exponentiating, inequality).
+* Investigate other basic mathematical functions (e.g., multiplication, exponentiation, inequalities).
 * Use a similar project approach to investigate classification.
