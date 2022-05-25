@@ -12,7 +12,7 @@ In this project, six popular machine learning algorithms have been investigated.
 * [XGBoost](https://en.wikipedia.org/wiki/XGBoost)
 * [TensorFlow](https://en.wikipedia.org/wiki/TensorFlow)
 
-It is important to note that goal of this project is not to accuractely predict the addition of two numbers. Rather, the goal of this project is to gain insights about *how* each model makes those predictions.
+It is important to note that goal of this project is not to accurately predict the addition of two numbers. Rather, the goal of this project is to gain insights about *how* each model makes those predictions.
 
 ### Rules For This Experiment:
 1. No feature engineering or excluding outliers. Otherwise, the problem becomes trivial, and no insights are gained.
@@ -50,7 +50,7 @@ In these plots, the predictions (y-axis) are compared to the correct value (x-ax
 
 All models follow some approximation of the basic slope of y<sub>predicted</sub> = y<sub>correct</sub>. However, each model has unique distribution of predictions (although Decision Trees and Random Forest are very similar, due to Random Forests being comprised of an ensemble of Decision Trees).
 
-An interesting note, the decrease in slope observed in the linear regression model is also observed in the TensorFlow model. For the linear regression model, this change in slope is due to the average value of the predicitons being "pulled towards zero" by the random noise from the training set (the "errors"). It is unknown whether there is a similar mechanism in the TensorFlow model.
+An interesting note, the decrease in slope observed in the linear regression model is also observed in the TensorFlow model. For the linear regression model, this change in slope is due to the average value of the predictions being "pulled towards zero" by the random noise from the training set (the "errors"). It is unknown whether there is a similar mechanism in the TensorFlow model.
 
 ### Heatmaps of Model Predictions Adding the Number 0 to 10
 
@@ -61,7 +61,7 @@ For "brevity", only models trained with datasets of 10,000 samples were plotted 
 *Figure 3. Heatmaps of Predictions - 10,000 Samples of Training Data*
 ![alt text](https://github.com/KevinCarr42/Teaching-A-Machine-To-Add/blob/main/heatmaps_of_predictions.png)
 
-As seen in these heatmaps, each of the models makes prediction errors in distictive patterns, with approximations becoming better as accuracy in the training data improves. In the linear regression and TensorFlow models, predictions are "pulled towards zero" for lower-accuracy training sets, as noted in the Scatterplot discussion.
+As seen in these heatmaps, each of the models makes prediction errors in distinctive patterns, with approximations becoming better as accuracy in the training data improves. In the linear regression and TensorFlow models, predictions are "pulled towards zero" for lower-accuracy training sets, as noted in the Scatterplot discussion.
 
 Patterns in errors in prediction from each of the other models (Decision Tree, Naive Bayes, Random Forest, and XGBoost) do not follow easily predictable patterns.
 
@@ -86,7 +86,7 @@ Linear regression appears to be the best predictive model, due to the lowest MSE
 ## Discussion And Conclusions
 
 ### Summary of Results:
-* Linear regression outperformed most models under most coditions.
+* Linear regression outperformed most models under most conditions.
 * There were very interesting visual patterns created by the predictions of some of the models. This is related to the randomised input data and model training; re-running the calculations leads to different but similar patterns.
 * The TensorFlow neural network worked very well.
 * Decision Tree and Random Forest models had very high MSE. However, these models also tended to out-predict other models in terms of total number of correct answers, especially at lower accuracies.
