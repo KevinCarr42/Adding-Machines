@@ -87,6 +87,7 @@ Linear regression appears to be the most accurate predictive model, due to the l
 
 ### Summary of Results:
 * Linear regression outperformed most models under most conditions.
+* Classifier and regressor implementations of decision tree models were included. Both performed similarly, even though adding 2 numbers should be considered a regression task.
 * There were very interesting visual patterns created by the predictions of some of the models. This is related to the randomised input data and model training; re-running the calculations leads to different but similar patterns.
 * The TensorFlow neural network also worked very well in most conditions.
 * Decision Tree and Random Forest models had very high MSE. However, these models also tended to out-predict other models in terms of total number of correct answers, especially at lower accuracies.
@@ -96,4 +97,4 @@ Linear regression appears to be the most accurate predictive model, due to the l
 * Investigate approaches and trade-offs required for these models to make predictions correctly / optimally.
 * Investigate deep neural networks in greater detail.
 * Investigate other basic mathematical functions (e.g., multiplication, exponentiation, inequalities).
-* Use a similar project approach to investigate classification.
+* Use a similar project approach to investigate a classification problem.
