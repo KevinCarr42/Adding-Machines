@@ -95,6 +95,6 @@ Linear regression appears to be the most accurate predictive model, due to the l
 ### Potential Future Work:
 * Investigate more machine learning models.
 * Investigate approaches and trade-offs required for these models to make predictions correctly / optimally.
-* Investigate deep neural networks in greater detail.
+* Investigate neural networks in greater detail.
 * Investigate other basic mathematical functions (e.g., multiplication, exponentiation, inequalities).
 * Use a similar project approach to investigate a classification problem.
