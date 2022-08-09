@@ -1,5 +1,7 @@
 # Teaching A Machine To Add
 
+![thumbnail](https://github.com/KevinCarr42/Teaching-A-Machine-To-Add/blob/main/adding-machines-thumbnail.jpg)
+
 This project examines popular machine learning models in order to gain insights into how these models deal with imperfect data and varying sample sizes. Specifically, this project demonstrates how these models predict the addition of two numbers.
 
 ## Introduction
@@ -43,10 +45,10 @@ For brevity (or at least a bit less verbosity), not all dataset sizes and accura
 In these plots, the predictions (y-axis) are compared to the correct value (x-axis) in order to visualise errors and predictions. Training datasets are shown in grey, and model predictions are shown in blue.
 
 *Figure 1. Scatterplot of Model Predictions vs Accuracy - 100 Samples of Training Data*
-![alt text](https://github.com/KevinCarr42/Teaching-A-Machine-To-Add/blob/main/predictions_100_samples.png)
+![fig1](https://github.com/KevinCarr42/Teaching-A-Machine-To-Add/blob/main/predictions_100_samples.png)
 
 *Figure 2. Scatterplot of Model Predictions vs Accuracy - 10,000 Samples of Training Data*
-![alt text](https://github.com/KevinCarr42/Teaching-A-Machine-To-Add/blob/main/predictions_10k_samples.png)
+![fig2](https://github.com/KevinCarr42/Teaching-A-Machine-To-Add/blob/main/predictions_10k_samples.png)
 
 All models follow some approximation of the basic slope of y<sub>predicted</sub> = y<sub>correct</sub>. However, each model has a unique distribution of predictions, with the exception of Decision Trees and Random Forests, whose similarity is due to Random Forests being an ensemble of Decision Trees.
 
@@ -59,7 +61,7 @@ In these plots, the models predict the addition of every number from 0 to 10 to 
 For "brevity", only models trained with datasets of 10,000 samples were plotted on these heatmaps. Additionally, predictions from these models are only shown at three training data accuracies (50%, 90%, and 100%).
 
 *Figure 3. Heatmaps of Predictions - 10,000 Samples of Training Data*
-![alt text](https://github.com/KevinCarr42/Teaching-A-Machine-To-Add/blob/main/heatmaps_of_predictions.png)
+![fig3](https://github.com/KevinCarr42/Teaching-A-Machine-To-Add/blob/main/heatmaps_of_predictions.png)
 
 As seen in these heatmaps, each of the models makes prediction errors in distinctive patterns, with approximations becoming better as accuracy in the training data improves. In the linear regression and TensorFlow models, predictions are "pulled towards zero" for lower-accuracy training sets as noted in the Scatterplot discussion.
 
@@ -72,12 +74,12 @@ Model performance was assessed as a function of training data sample size and tr
 When assessing performance vs training data sample size, only three sample accuracies were shown (50%, 90%, and 100%).
 
 *Figure 4. Model Performance vs Training Data Sample Size*
-![alt text](https://github.com/KevinCarr42/Teaching-A-Machine-To-Add/blob/main/performance_v_size.png)
+![fig4](https://github.com/KevinCarr42/Teaching-A-Machine-To-Add/blob/main/performance_v_size.png)
 
 Increased training data size generally decreases the mean squared error (MSE) and increases the number of correct guesses for each model.
 
 *Figure 5. Model Performance vs Training Data Accuracy*
-![alt text](https://github.com/KevinCarr42/Teaching-A-Machine-To-Add/blob/main/performance_v_accuracy.png)
+![fig5](https://github.com/KevinCarr42/Teaching-A-Machine-To-Add/blob/main/performance_v_accuracy.png)
 
 Similarly, increased training data accuracy generally decreases the mean squared error (MSE) and increases the number of correct guesses for each model.
 
